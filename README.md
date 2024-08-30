@@ -14,7 +14,7 @@ Depending on how much storage you server has you might be able to backup your wh
 
 First lets create the data directory for npm
 ```
-sudo mkdir -p /srv/dockerdata/NGINXProxyManager
+sudo mkdir -p /srv/dockerdata/NGINXProxyManager/data && sudo mkdir /srv/dockerdata/NGINXProxyManager/letsencrypt
 ```
 Open up Portainer from CasaOS and create a secure admin account, click on ``Get Started`` and then ``local``
 
