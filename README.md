@@ -12,4 +12,16 @@ Depending on how much storage you server has you might be able to backup your wh
 
 ## Section 1: Installing Nginx Proxy Manager(npm)
 
-Open up Portainer from CasaOS and create a secure admin account, click on ``Get Started``
+First lets create the data directory for npm
+```
+sudo mkdir -p /srv/dockerdata/NGINXProxyManager
+```
+Open up Portainer from CasaOS and create a secure admin account, click on ``Get Started`` and then ``local``
+
+Install the docker container graphically using [this video](https://www.youtube.com/watch?v=fCJbw75DCZw&t=467s) at 1:08 in portainer
+
+After the install go to http://192.168.your.ip:81
+
+more to come
+
+sooooooon...
