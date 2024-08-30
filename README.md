@@ -20,8 +20,18 @@ Open up Portainer from CasaOS and create a secure admin account, click on ``Get 
 
 Install the docker container graphically using [this video](https://www.youtube.com/watch?v=fCJbw75DCZw&t=467s) at 1:08 in portainer
 
-After the install go to http://192.168.your.ip:81
+After the install go to http://192.168.your.ip:81 , the default user name is ``admin@example.com`` and the default password is ``changeme``
 
-more to come
+After you login a popup will prompt you to change the username and password, please do so
 
-sooooooon...
+You can use your own domain that you can purchased but in this guide we will use a free duckdns subdomain along with setting it up with dynamic dns because most of the time resedential internet does not come with a public static ip
+
+Go to [duckdns.org](https://duckdns.org), create an account, and claim your own subdomain, also save your token for later
+
+Now go to ``Install`` > ``linux cron`` and follow the instructions for pointing your Debian server to duckdns
+
+Now that we have Dynamic DNS setup with DuckDNS we need to do some port forwarding
+
+Search up something like ``how to port forward brand modelno`` and forward the ports 80 and 443 from your Debian server
+
+Back in npm we will do stuff lator
