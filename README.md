@@ -24,7 +24,7 @@ After the install go to http://192.168.your.ip:81 , the default user name is ``a
 
 After you login a popup will prompt you to change the username and password, please do so
 
-You can use your own domain that you can purchased but in this guide we will use a free duckdns subdomain along with setting it up with dynamic dns because most of the time resedential internet does not come with a public static ip
+You can use your own domain that you purchased but in this guide we will use a free duckdns subdomain along with setting it up with dynamic dns because most of the time resedential internet does not come with a public static ip
 
 Go to [duckdns.org](https://duckdns.org), create an account, and claim your own subdomain, also save your token for later
 
