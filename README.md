@@ -64,11 +64,13 @@ nextcloud/all-in-one:latest
 
 Go to ``https://192.168.your.ip:8090`` and it will greet you with your mastercontainer password, write it down and keep it somewhere safe, under ``New AIO Instance`` put ``nc.chosenname.duckdns.org`` and submit that domain.
 
-Uncheck ``Collabora (Nextcloud Office)`` since we will use OnlyOffice, select anything else that you want and hit ``Save changes``, input your timezone, and for backups we will do ``/mnt/backup``.
+Uncheck ``Collabora (Nextcloud Office)`` since we will use OnlyOffice, select anything else that you want and hit ``Save changes`` and input your timezone.
 
-Finally check the box to install the latest stable version of Nextcloud and hit ``Download and start containers``. After all of the containers have downloaded and loaded, go and shut them all down, in the CasaOS file manger go to ``/srv/dockerdata/nextcloudAIO/config`` and edit the ``configuration.json``, find ``isOnlyofficeEnabled`` and change the 0 to a 1, in portainer go to the ``containers`` page and reboot the master container.
+Finally check the box to install the latest stable version of Nextcloud and hit ``Download and start containers``. After all of the containers have downloaded and loaded, go and shut them all down, in the CasaOS file manger go to ``/srv/dockerdata/nextcloudAIO/config`` and edit the ``configuration.json``, find ``isOnlyofficeEnabled`` and change the 0 to a 1, in portainer go to the ``containers`` page and reboot the master container. 
 
-After the reboot you can boot all of the containers back up, in npm click on the 3 dots button next to your ``nc.chosenname.duckdns.org`` and edit the ip to be the ip of the ``nextcloud-aio-apache`` container, the ip can be found in the portainer ``containers`` page.
+In the ``Backup and Restore`` section put ``/mnt/backup`` and click ``Submit Backup location``.
+
+After that you can boot all of the containers back up, in npm click on the 3 dots button next to your ``nc.chosenname.duckdns.org`` and edit the ip to be the ip of the ``nextcloud-aio-apache`` container, the ip can be found in the portainer ``containers`` page.
 
 Click ``save`` and you have a funtioning Nextcloud instance that you can access from ``https://nc.chosenname.duckdns.org``!!!
 
