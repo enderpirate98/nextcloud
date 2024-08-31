@@ -36,4 +36,4 @@ Search up something like ``how to port forward brand modelno`` and forward the p
 
 Back in npm go to ``Hosts`` and click ``Add Proxy Host``, set the scheme to ``https``, for now the ip will ``172.0.0.1`` but it will be changed when the appropriate container is created, the port to forward is ``11000``, enable ``Block Common Exploits`` and ``Websockets Support``, the domain name will be ``nc.chosenname.duckdns.org``
 
-Go to the ``ssl`` tab and ``Request a new SSL Certificate``, enable ``Force SSL``, ``HTTP/2 Support``, and ``Use a DNS Challenge``. 
+Go to the ``ssl`` tab and ``Request a new SSL Certificate``, enable ``Force SSL``, ``HTTP/2 Support``, and ``Use a DNS Challenge``. For the DNS Provider choose ``DuckDNS`` and put the token that you got earlier, provide your personal email and click ``I Agree to the Let's Encrypt terms and service`` and we have the networking portion done.
