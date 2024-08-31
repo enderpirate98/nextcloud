@@ -34,4 +34,6 @@ Now that we have Dynamic DNS setup with DuckDNS we need to do some port forwardi
 
 Search up something like ``how to port forward brand modelno`` and forward the ports 80 and 443 from your Debian server
 
-Back in npm we will do stuff lator
+Back in npm go to ``Hosts`` and click ``Add Proxy Host``, set the scheme to ``https``, for now the ip will ``172.0.0.1`` but it will be changed when the appropriate container is created, the port to forward is ``11000``, enable ``Block Common Exploits`` and ``Websockets Support``, the domain name will be ``nc.chosenname.duckdns.org``
+
+Go to the ``ssl`` tab and ``Request a new SSL Certificate``, enable ``Force SSL``, ``HTTP/2 Support``, and ``Use a DNS Challenge``. 
