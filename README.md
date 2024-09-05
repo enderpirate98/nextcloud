@@ -40,9 +40,9 @@ Go to the ``ssl`` tab and ``Request a new SSL Certificate``, enable ``Force SSL`
 
 ## Section 2: Installing Nextlcoud AIO and OnlyOffice AIO
 
-First we need to create the directories that will store Nextcloud AIO with the data, configs, and backups
+First we need to create the directories that will store Nextcloud AIO with the data and backups
 ```
-sudo mkdir -p /srv/dockerdata/nextcloudAIO/config && sudo mkdir /srv/dockerdata/nextcloudAIO/data && sudo mkdir /srv/dockerdata/nextcloudAIO/backups
+sudo mkdir -p /srv/dockerdata/nextcloudAIO/data && sudo mkdir /srv/dockerdata/nextcloudAIO/backups
 ```
 This command will install the Nextcloud AIO Mastercontainer
 
@@ -55,10 +55,10 @@ docker run \
 --publish 8090:8080 \
 --publish 8443:8443 \
 --env APACHE_PORT=11000 \
---volume nextcloud_aio_mastercontainer:/srv/dockerdata/nextcloudAIO/config \
+--volume nextcloud_aio_mastercontainer:/mnt/docker-aio-config \
 --volume /var/run/docker.sock:/var/run/docker.sock:ro \
---volume /srv/dockerdata/nextcloudAIO/data:/mnt/docker-aio-config \
---volume /srv/dockerdata/nextcloudAIO/backups:/mnt/backup
+--env NEXTCLOUD_DATADIR="/srv/dockerdata/nextcloudAIO/data" \
+--volume /srv/dockerdata/nextcloudAIO/backups:/mnt/backup \
 nextcloud/all-in-one:latest
 ```
 
