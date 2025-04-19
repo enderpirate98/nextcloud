@@ -77,3 +77,21 @@ Click ``save`` and you have a funtioning Nextcloud instance that you can access 
 ## Section 3: Using Nextcloud on Client Devices
 
 I will finish this later but for now this is pretty good!
+
+
+Stuff for a friend:
+```
+docker run \
+--sig-proxy=false \
+--name nextcloud-aio-mastercontainer \
+--restart always \
+--publish 82:80 \
+--publish 8090:8080 \
+--publish 8443:8443 \
+--env APACHE_PORT=11000 \
+--volume nextcloud_aio_mastercontainer:/srv/dockerdata/nextcloudAIO/config \
+--volume /var/run/docker.sock:/var/run/docker.sock:ro \
+--volume /srv/dockerdata/nextcloudAIO/data:/mnt/docker-aio-config \
+--volume /srv/dockerdata/nextcloudAIO/backups:/mnt/backup
+nextcloud/all-in-one:latest
+```
